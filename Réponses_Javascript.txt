@@ -1,0 +1,204 @@
+Quelle est la syntaxe de base d’une déclaration de variable en JavaScript?
+	let nomVariable = "toto";
+
+Quelle est la différence entre let et var en JavaScript?
+	Avec let on déclare une variable locale alors que var déclare une variable globale. (Ne pas utiliser var, car une variable globale à un projet est difficile à gérer)
+
+Quelle est la différence entre null et undefined en JavaScript?
+
+	null fait référence à une variable définie mais sans valeur.
+
+	undefined fait référence à une variable qui n'existe pas.
+
+Comment concaténer deux chaînes de caractères en JavaScript?
+
+	let maChaine = "chaine1" + "chaine2"
+
+Comment convertir une chaîne en entier en JavaScript?
+
+	let maChaineEntier = parseInt("185.28"); => maChaineEntier = 185
+
+
+Comment créer une fonction en JavaScript?
+
+	function addition() {
+		let resultat = 3 + 2;
+		return resultat;
+	}
+
+Quelle est la différence entre une fonction déclarative et une fonction exprimée en JavaScript?
+
+Comment appeler une fonction en JavaScript?
+
+ 	let resultat = addition();
+
+Comment passer des arguments à une fonction en JavaScript?
+
+	function addition(operateur1,operateur2) {
+		resultat = operateur1 + operateur2:
+		return resultat;
+	}
+
+	let monAddition = addition (2,3);
+
+Comment utiliser une boucle for en JavaScript?
+	for (int i = 0; i < 5; i++) {
+		console.log ("i = " + i);
+	}
+
+Comment utiliser une boucle while en JavaScript?
+
+	int i = 0;
+	while (i < 10) {
+		console.log ("i = " + i);
+		i++;
+	}
+
+Comment utiliser une boucle do...while en JavaScript?
+
+	int i = 0;
+
+	do {
+		console.log ("i = " + i);
+
+	}while (i < 10);
+
+
+Comment utiliser l’instruction break dans une boucle en JavaScript?
+
+	for (int i = 0; i < 5; i++) {
+
+		if (i==3) {
+			console.log ("l'indice est 3, on sort de la boucle");
+			break;
+		}
+		console.log ("i = " + i);
+	}
+
+
+Comment utiliser l’instruction continue dans une boucle en JavaScript?
+
+	for (int i = 0; i < 5; i++) {
+
+		if (i==3) {
+			console.log ("l'indice est 3, le message suivant ne sera pas affiché !"); 
+
+			// on va en fin de boucle sans executer les instructions suivantes mais on execute toute la boucle for");
+			continue;
+		}
+
+		console.log ("i = " + i);
+	}
+
+Quelle est la différence entre l’opérateur == et l’opérateur === en JavaScript ?
+
+	=== est un opérateur d'égalité stricte et renvoie un booléen (le test est fait sur le type (integer, string, booléen) des opérandes)
+	ex 1 === 1 renvoie true, 1 === '1' renvoie false.
+
+	== est l'opérateur d'égalité qui teste 2 opérandes et renvoi un booléen. 
+	A la différence de l'opérateur d'égalité stricte, 1 == '1' renvoie true.
+
+Comment utiliser un opérateur ternaire en JavaScript ?
+
+Comment créer un tableau en JavaScript ?
+	let myTab = ['titi','toto','tata'];
+
+Comment accéder à un élément d’un tableau en JavaScript?
+	let monNom = myTab[1]; Pour accéder au 2ème élément du tableau
+
+Comment utiliser la méthode push pour ajouter un élément à la fin d’un tableau en JavaScript?
+	let newElement = myTab.push('Angelo');
+
+Comment utiliser la méthode pop pour supprimer un élément de la fin d’un tableau en JavaScript?
+	let element = myTab.pop();
+
+Comment utiliser la méthode shift pour supprimer un élément du début d’un tableau en JavaScript?
+	let element = myTab.shift();
+
+Comment utiliser la méthode unshift pour ajouter un élément au début d’un tableau en JavaScript?
+	let element = myTab.unshift('Hélène');
+
+Comment utiliser la méthode splice pour ajouter, supprimer ou remplacer des éléments d’un tableau en JavaScript?
+
+	Ajouter: myTab.splice(index du tableau ou on veut insérer le ou les éléments, 0 indique qu'on ajoute des éléments, élément1, élément2)
+		let myTab = ['titi','toto','tata'];
+		myTab.splice(1,0,"Adèle"); => mytab['titi','Adèle','toto','tata']
+
+	Supprimer: myTab.splice(index du tableau ou on veut supprimer le ou les éléments, Le nombre d'éléments à supprimer)
+		let myTab = ['titi','toto','tata'];
+		myTab.splice(0,1); => mytab['toto','tata']
+
+	Remplacer: myTab.splice(index du tableau ou on veut remplacer le ou les éléments, Le nombre d'éléments à remplacer, element1,element2,..)
+		let myTab = ['titi','toto','tata'];
+		myTab.splice(0,1,'Alain'); => mytab['titi','Alain','tata']
+
+
+Comment utiliser la méthode slice pour copier un sous - tableau d’un tableau en JavaScript?
+		   let myTab = ['titi','toto','tata'];
+		   MyNewTab = myTab.slice(0,2); => MyNewTab = ['tata']
+
+Comment parcourir un tableau en JavaScript avec la méthode forEach ?
+	let myTab = ['titi','toto','tata'];
+	MyTab.forEach(element => console.log(element));
+
+Comment utiliser la méthode map pour transformer chaque élément d’un tableau en JavaScript?
+	const myTab = [1,2,3,4];
+
+	const map1 = myTab.map(x => x + 2);
+	console.log(map1); => myTab[3,4,5,6]
+
+
+Comment utiliser la méthode filter pour filtrer les éléments d’un tableau en JavaScript?
+	const myTab = ['titi','toto','Jean-Marc','tata'];
+	const result = myTab.filter(myTab => myTab.length > 4); 
+	result contient ['Jean-Marc']
+
+Comment utiliser la méthode reduce pour réduire un tableau en une valeur unique en JavaScript ?
+
+Comment créer un objet en JavaScript ?
+
+	let maVoiture = new Object;
+	maVoiture.fabricant = "BMW";
+	maVoiture.modele = "Z1";
+
+Comment accéder à une propriété d’un objet en JavaScript ?
+
+	let fabricant = maVoiture.fabricant;
+	let modele = maVoiture.modele;
+
+Comment définir une propriété d’un objet en JavaScript ?
+	maVoiture.fabricant = "BMW";
+	maVoiture.modele = "Z1";
+
+Comment supprimer une propriété d’un objet en JavaScript ?
+	delete maVoiture.modele;
+
+quelle différence entre java et javascript ?
+
+	javascript est un langage interprété utilisé pour le web.
+
+	java est un langage utilisé pour des applications indépendantes telles des applis embarquées.
+
+Réagir
+Répondre
+
+
+
+
+
+
+
+
+
+
+
+
+Envoyer un message général
+
+
+
+
+
+
+
+
